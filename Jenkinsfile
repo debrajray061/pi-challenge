@@ -11,12 +11,14 @@ pipeline {
                 // this step is required to make sure the script
                 // can be executed directly in a shell
                 // bat 'chmod +x ./algorithm.sh'
+                echo 'Skipping chmod on Windows'
+
             }
         }
         stage('Build') {
             steps {
                 // the algorithm script creates a file named report.txt
-                bash 'algorithm.sh'
+                bat 'bash algorithm.sh'
 
                 // this step archives the report
                 archiveArtifacts allowEmptyArchive: true,
