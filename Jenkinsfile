@@ -18,7 +18,7 @@ pipeline {
         stage('Build') {
             steps {
                 // the algorithm script creates a file named report.txt
-                bat 'bash algorithm.sh'
+                bat 'algorithm.bat'
 
                 // this step archives the report
                 archiveArtifacts allowEmptyArchive: true,
