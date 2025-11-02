@@ -1,1 +1,1 @@
-echo "scale=1000; 4*a(1)" | bc -l > report.txt
+perl -e "print 4 * atan2(1, 1)"
