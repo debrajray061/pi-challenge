@@ -1,1 +1,1 @@
-echo "scale=1000; 4*a(1)" | bc -l | tee report.txt
+bat 'wsl echo "scale=1000; 4*a(1)" | bc -l > report.txt'
